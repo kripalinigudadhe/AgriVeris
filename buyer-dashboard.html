@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buyer Dashboard - AgriVeris</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">🌿</span>
+                <span class="logo-text">AgriVeris</span>
+            </div>
+            <button class="hamburger" onclick="toggleMenu()">☰</button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="marketplace.html">Marketplace</a></li>
+                <li><a href="login.html" class="btn-primary">Login</a></li>
+                <li><a href="register.html" class="btn-secondary">Sign Up</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="dashboard-container">
+            <aside class="sidebar">
+                <ul class="sidebar-menu">
+                    <li><a href="buyer-dashboard.html" class="active">🛒 Dashboard</a></li>
+                    <li><a href="marketplace.html">🛍️ Marketplace</a></li>
+                    <li><a href="traceability-map.html">🗺️ Traceability</a></li>
+                    <li><a href="payment-history.html">💳 Orders</a></li>
+                </ul>
+            </aside>
+
+            <section class="main-content">
+                <h1 style="color: var(--dark-forest); margin-bottom: 2rem;">Buyer Dashboard</h1>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+                    <div style="background-color: var(--pure-white); border-left: 4px solid var(--primary-green); padding: 1.5rem; border-radius: 5px;">
+                        <h4 style="color: var(--muted-text); margin-bottom: 0.5rem;">Total Orders</h4>
+                        <p style="font-size: 1.8rem; color: var(--primary-green); font-weight: bold;">24</p>
+                    </div>
+                    <div style="background-color: var(--pure-white); border-left: 4px solid var(--secondary-green); padding: 1.5rem; border-radius: 5px;">
+                        <h4 style="color: var(--muted-text); margin-bottom: 0.5rem;">Total Spent</h4>
+                        <p style="font-size: 1.8rem; color: var(--secondary-green); font-weight: bold;">$3,450</p>
+                    </div>
+                    <div style="background-color: var(--pure-white); border-left: 4px solid var(--olive-neutral); padding: 1.5rem; border-radius: 5px;">
+                        <h4 style="color: var(--muted-text); margin-bottom: 0.5rem;">Verified Products</h4>
+                        <p style="font-size: 1.8rem; color: var(--olive-neutral); font-weight: bold;">100%</p>
+                    </div>
+                    <div style="background-color: var(--pure-white); border-left: 4px solid var(--dark-forest); padding: 1.5rem; border-radius: 5px;">
+                        <h4 style="color: var(--muted-text); margin-bottom: 0.5rem;">Trust Score</h4>
+                        <p style="font-size: 1.8rem; color: var(--dark-forest); font-weight: bold;">9.2/10</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Recent Purchases</h3>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Farmer</th>
+                                <th>Date</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Organic Tomatoes (2kg)</td>
+                                <td>Green Acres Farm</td>
+                                <td>2024-02-05</td>
+                                <td>$12.99</td>
+                                <td><span class="badge badge-success">Delivered</span></td>
+                            </tr>
+                            <tr>
+                                <td>Organic Wheat (5kg)</td>
+                                <td>Golden Fields</td>
+                                <td>2024-02-03</td>
+                                <td>$24.99</td>
+                                <td><span class="badge badge-success">Delivered</span></td>
+                            </tr>
+                            <tr>
+                                <td>Free-Range Carrots (1.5kg)</td>
+                                <td>Eco Harvest</td>
+                                <td>2024-02-01</td>
+                                <td>$6.99</td>
+                                <td><span class="badge badge-pending">In Transit</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>AgriVeris</h4>
+                <p>Transparent agricultural verification through AI and blockchain</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 AgriVeris. All rights reserved. | Building Trust in Agriculture</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

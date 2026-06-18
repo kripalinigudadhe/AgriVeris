@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audit History - AgriVeris</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">🌿</span>
+                <span class="logo-text">AgriVeris</span>
+            </div>
+            <button class="hamburger" onclick="toggleMenu()">☰</button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="marketplace.html">Marketplace</a></li>
+                <li><a href="login.html" class="btn-primary">Login</a></li>
+                <li><a href="register.html" class="btn-secondary">Sign Up</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="dashboard-container">
+            <aside class="sidebar">
+                <ul class="sidebar-menu">
+                    <li><a href="audit-history.html" class="active">🧾 Audit Log</a></li>
+                    <li><a href="verifier-panel.html">✅ Verifiers</a></li>
+                    <li><a href="blockchain-ledger.html">🔗 Ledger</a></li>
+                </ul>
+            </aside>
+
+            <section class="main-content">
+                <h1 style="color: var(--dark-forest); margin-bottom: 2rem;">Audit & Verification Logs</h1>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Recent Audit Actions</h3>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Timestamp</th>
+                                <th>Verifier</th>
+                                <th>Action</th>
+                                <th>Batch ID</th>
+                                <th>Result</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2024-02-05 14:30</td>
+                                <td>Jane Smith</td>
+                                <td>Manual Review</td>
+                                <td>#ORG-001</td>
+                                <td><span class="badge badge-success">Approved</span></td>
+                            </tr>
+                            <tr>
+                                <td>2024-02-05 12:15</td>
+                                <td>AI System</td>
+                                <td>Automated Analysis</td>
+                                <td>#ORG-002</td>
+                                <td><span class="badge badge-success">Verified</span></td>
+                            </tr>
+                            <tr>
+                                <td>2024-02-04 10:45</td>
+                                <td>John Verifier</td>
+                                <td>Quality Check</td>
+                                <td>#ORG-003</td>
+                                <td><span class="badge badge-warning">Flagged</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>AgriVeris</h4>
+                <p>Transparent agricultural verification through AI and blockchain</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 AgriVeris. All rights reserved. | Building Trust in Agriculture</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

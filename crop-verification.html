@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Verification - AgriVeris</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">🌿</span>
+                <span class="logo-text">AgriVeris</span>
+            </div>
+            <button class="hamburger" onclick="toggleMenu()">☰</button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="marketplace.html">Marketplace</a></li>
+                <li><a href="login.html" class="btn-primary">Login</a></li>
+                <li><a href="register.html" class="btn-secondary">Sign Up</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="dashboard-container">
+            <aside class="sidebar">
+                <ul class="sidebar-menu">
+                    <li><a href="dashboard.html">📊 Dashboard</a></li>
+                    <li><a href="crop-verification.html" class="active">🌱 Verification</a></li>
+                    <li><a href="ai-analysis.html">🤖 AI Analysis</a></li>
+                    <li><a href="certifications.html">🪪 Certificates</a></li>
+                </ul>
+            </aside>
+
+            <section class="main-content">
+                <h1 style="color: var(--dark-forest); margin-bottom: 2rem;">Crop Verification</h1>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Submit New Crop for Verification</h3>
+                    </div>
+                    <form onsubmit="handleCropSubmission(event)">
+                        <div class="form-group">
+                            <label for="cropType">Crop Type</label>
+                            <select id="cropType" required>
+                                <option>Select Crop Type</option>
+                                <option>Tomatoes</option>
+                                <option>Wheat</option>
+                                <option>Rice</option>
+                                <option>Carrots</option>
+                                <option>Lettuce</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="quantity">Quantity (kg)</label>
+                            <input type="number" id="quantity" min="1" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="harvestDate">Harvest Date</label>
+                            <input type="date" id="harvestDate" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="soilData">Soil Quality Data</label>
+                            <textarea id="soilData" placeholder="pH level, nitrogen content, etc." required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="images">Upload Images</label>
+                            <input type="file" id="images" accept="image/*" multiple>
+                        </div>
+
+                        <button type="submit" class="btn-primary" style="width: 100%;">Submit for Verification</button>
+                    </form>
+                </div>
+
+                <div class="card" style="margin-top: 2rem;">
+                    <div class="card-header">
+                        <h3>Pending Verifications</h3>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Crop</th>
+                                <th>Quantity</th>
+                                <th>Submitted</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Tomatoes</td>
+                                <td>500 kg</td>
+                                <td>2024-02-01</td>
+                                <td><span class="badge badge-pending">Pending</span></td>
+                                <td><a href="#" style="color: var(--primary-green);">View Details</a></td>
+                            </tr>
+                            <tr>
+                                <td>Wheat</td>
+                                <td>1000 kg</td>
+                                <td>2024-02-05</td>
+                                <td><span class="badge badge-pending">Review</span></td>
+                                <td><a href="#" style="color: var(--primary-green);">View Details</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>AgriVeris</h4>
+                <p>Transparent agricultural verification through AI and blockchain</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 AgriVeris. All rights reserved. | Building Trust in Agriculture</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function handleCropSubmission(e) {
+            e.preventDefault();
+            showToast('Crop submitted for verification', 'success');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - AgriVeris</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 1rem 1.5rem;
+            background-color: var(--primary-green);
+            color: var(--pure-white);
+            border-radius: 5px;
+            z-index: 1000;
+            animation: slideIn 0.3s ease-out;
+        }
+        
+        .toast.toast-error {
+            background-color: #E74C3C;
+        }
+        
+        @keyframes slideIn {
+            from {
+                transform: translateX(400px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        
+        .dashboard-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .stat-box {
+            background-color: var(--pure-white);
+            border-left: 4px solid var(--primary-green);
+            padding: 1.5rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        
+        .stat-box h4 {
+            color: var(--muted-text);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-box .value {
+            font-size: 1.8rem;
+            color: var(--primary-green);
+            font-weight: bold;
+        }
+        
+        .recent-activity {
+            background-color: var(--pure-white);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .activity-item {
+            padding: 1rem;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .activity-item:last-child {
+            border-bottom: none;
+        }
+        
+        .activity-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--mint-glow);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+        
+        .activity-content p {
+            margin: 0;
+            color: var(--muted-text);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">🌿</span>
+                <span class="logo-text">AgriVeris</span>
+            </div>
+            <button class="hamburger" onclick="toggleMenu()">☰</button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="marketplace.html">Marketplace</a></li>
+                <li><a href="dashboard.html" class="btn-primary">Dashboard</a></li>
+                <li><a href="#" onclick="mockLogout()" class="btn-secondary">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="dashboard-container">
+            <aside class="sidebar">
+                <ul class="sidebar-menu">
+                    <li><a href="dashboard.html" class="active">📊 Overview</a></li>
+                    <li><a href="farmer-profile.html">👨‍🌾 Profile</a></li>
+                    <li><a href="crop-verification.html">🌱 Crop Verification</a></li>
+                    <li><a href="certifications.html">🪪 Certifications</a></li>
+                    <li><a href="analytics.html">📈 Analytics</a></li>
+                    <li><a href="marketplace.html">🧺 Marketplace</a></li>
+                    <li><a href="blockchain-ledger.html">🔗 Blockchain</a></li>
+                    <li><a href="community.html">🌾 Community</a></li>
+                    <li><a href="payment-history.html">💵 Payments</a></li>
+                    <li><a href="reward-center.html">🏅 Rewards</a></li>
+                </ul>
+            </aside>
+
+            <section class="main-content">
+                <div style="margin-bottom: 2rem;">
+                    <h1 style="color: var(--dark-forest); margin-bottom: 0.5rem;">Dashboard</h1>
+                    <p style="color: var(--muted-text);" id="welcomeMessage">Welcome!</p>
+                </div>
+
+                <div class="dashboard-stats">
+                    <div class="stat-box">
+                        <h4>Verified Crops</h4>
+                        <div class="value">24</div>
+                    </div>
+                    <div class="stat-box">
+                        <h4>Active Certifications</h4>
+                        <div class="value">8</div>
+                    </div>
+                    <div class="stat-box">
+                        <h4>Pending Verifications</h4>
+                        <div class="value">3</div>
+                    </div>
+                    <div class="stat-box">
+                        <h4>Earned Rewards</h4>
+                        <div class="value">1,250</div>
+                    </div>
+                </div>
+
+                <div class="grid-2" style="margin-top: 2rem;">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Recent Activity</h3>
+                        </div>
+                        <div class="recent-activity">
+                            <div class="activity-item">
+                                <div class="activity-icon">✓</div>
+                                <div class="activity-content">
+                                    <p><strong>Crop Verified</strong></p>
+                                    <p>Tomato harvest verified - 500kg</p>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-icon">🏅</div>
+                                <div class="activity-content">
+                                    <p><strong>Reward Earned</strong></p>
+                                    <p>250 tokens for eco-friendly practices</p>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-icon">📊</div>
+                                <div class="activity-content">
+                                    <p><strong>Report Generated</strong></p>
+                                    <p>Monthly sustainability metrics ready</p>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-icon">🔗</div>
+                                <div class="activity-content">
+                                    <p><strong>Blockchain Entry</strong></p>
+                                    <p>Transaction recorded #B2024001</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Quick Actions</h3>
+                        </div>
+                        <div style="display: flex; flex-direction: column; gap: 1rem;">
+                            <button class="btn-primary" onclick="window.location.href='crop-verification.html'" style="width: 100%; padding: 0.75rem;">📤 Upload New Crop</button>
+                            <button class="btn-secondary" onclick="window.location.href='certifications.html'" style="width: 100%; padding: 0.75rem;">🪪 View Certificates</button>
+                            <button class="btn-primary" onclick="window.location.href='marketplace.html'" style="width: 100%; padding: 0.75rem;">🧺 Browse Marketplace</button>
+                            <button class="btn-secondary" onclick="window.location.href='blockchain-ledger.html'" style="width: 100%; padding: 0.75rem;">🔗 View Ledger</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" style="margin-top: 2rem;">
+                    <div class="card-header">
+                        <h3>Certification Status</h3>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Crop Type</th>
+                                <th>Batch ID</th>
+                                <th>Status</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Organic Tomatoes</td>
+                                <td>#ORG-2024-001</td>
+                                <td><span class="badge badge-success">Verified</span></td>
+                                <td>2024-01-15</td>
+                            </tr>
+                            <tr>
+                                <td>Wheat</td>
+                                <td>#WHT-2024-002</td>
+                                <td><span class="badge badge-success">Verified</span></td>
+                                <td>2024-01-20</td>
+                            </tr>
+                            <tr>
+                                <td>Rice</td>
+                                <td>#RIC-2024-003</td>
+                                <td><span class="badge badge-pending">Pending</span></td>
+                                <td>2024-02-01</td>
+                            </tr>
+                            <tr>
+                                <td>Carrots</td>
+                                <td>#CAR-2024-004</td>
+                                <td><span class="badge badge-warning">Review</span></td>
+                                <td>2024-02-05</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>AgriVeris</h4>
+                <p>Transparent agricultural verification through AI and blockchain</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 AgriVeris. All rights reserved. | Building Trust in Agriculture</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        requireAuth();
+        
+        const user = getCurrentUser();
+        if (user) {
+            document.getElementById('welcomeMessage').textContent = `Welcome, ${user.email}!`;
+        }
+    </script>
+</body>
+</html>

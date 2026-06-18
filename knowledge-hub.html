@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knowledge Hub - AgriVeris</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">🌿</span>
+                <span class="logo-text">AgriVeris</span>
+            </div>
+            <button class="hamburger" onclick="toggleMenu()">☰</button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="marketplace.html">Marketplace</a></li>
+                <li><a href="login.html" class="btn-primary">Login</a></li>
+                <li><a href="register.html" class="btn-secondary">Sign Up</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="dashboard-container">
+            <aside class="sidebar">
+                <ul class="sidebar-menu">
+                    <li><a href="knowledge-hub.html" class="active">📚 Hub</a></li>
+                    <li><a href="community.html">🌾 Community</a></li>
+                    <li><a href="ai-lab.html">🧬 AI Lab</a></li>
+                </ul>
+            </aside>
+
+            <section class="main-content">
+                <h1 style="color: var(--dark-forest); margin-bottom: 2rem;">Knowledge Hub</h1>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+                    <div style="background-color: var(--pure-white); border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden;">
+                        <div style="background: linear-gradient(135deg, var(--primary-green), var(--mint-glow)); padding: 1.5rem; color: var(--pure-white);">
+                            <h3 style="margin: 0; margin-bottom: 0.5rem;">Organic Farming Essentials</h3>
+                            <p style="margin: 0; font-size: 0.9rem;">Learn the fundamentals of organic farming and sustainable practices.</p>
+                        </div>
+                        <div style="padding: 1.5rem;">
+                            <p style="color: var(--muted-text); margin-bottom: 1rem;">Comprehensive guide covering soil management, crop rotation, and natural pest control.</p>
+                            <button class="btn-secondary" style="width: 100%;">Read Article</button>
+                        </div>
+                    </div>
+
+                    <div style="background-color: var(--pure-white); border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden;">
+                        <div style="background: linear-gradient(135deg, var(--secondary-green), var(--mint-glow)); padding: 1.5rem; color: var(--pure-white);">
+                            <h3 style="margin: 0; margin-bottom: 0.5rem;">AI Verification Process</h3>
+                            <p style="margin: 0; font-size: 0.9rem;">Understanding how AI analyzes your crops and data.</p>
+                        </div>
+                        <div style="padding: 1.5rem;">
+                            <p style="color: var(--muted-text); margin-bottom: 1rem;">Explore our machine learning models and how they verify agricultural authenticity.</p>
+                            <button class="btn-secondary" style="width: 100%;">Read Article</button>
+                        </div>
+                    </div>
+
+                    <div style="background-color: var(--pure-white); border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden;">
+                        <div style="background: linear-gradient(135deg, var(--olive-neutral), var(--dark-forest)); padding: 1.5rem; color: var(--pure-white);">
+                            <h3 style="margin: 0; margin-bottom: 0.5rem;">Carbon Credits & Trading</h3>
+                            <p style="margin: 0; font-size: 0.9rem;">Monetize your sustainability efforts.</p>
+                        </div>
+                        <div style="padding: 1.5rem;">
+                            <p style="color: var(--muted-text); margin-bottom: 1rem;">How to earn and trade carbon credits on the AgriVeris platform.</p>
+                            <button class="btn-secondary" style="width: 100%;">Read Article</button>
+                        </div>
+                    </div>
+
+                    <div style="background-color: var(--pure-white); border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden;">
+                        <div style="background: linear-gradient(135deg, var(--primary-green), var(--dark-forest)); padding: 1.5rem; color: var(--pure-white);">
+                            <h3 style="margin: 0; margin-bottom: 0.5rem;">Blockchain & Smart Contracts</h3>
+                            <p style="margin: 0; font-size: 0.9rem;">Understanding decentralized verification.</p>
+                        </div>
+                        <div style="padding: 1.5rem;">
+                            <p style="color: var(--muted-text); margin-bottom: 1rem;">Deep dive into blockchain technology and how it secures your certifications.</p>
+                            <button class="btn-secondary" style="width: 100%;">Read Article</button>
+                        </div>
+                    </div>
+
+                    <div style="background-color: var(--pure-white); border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden;">
+                        <div style="background: linear-gradient(135deg, var(--secondary-green), var(--olive-neutral)); padding: 1.5rem; color: var(--pure-white);">
+                            <h3 style="margin: 0; margin-bottom: 0.5rem;">Marketplace Best Practices</h3>
+                            <p style="margin: 0; font-size: 0.9rem;">Maximize your sales and reach buyers.</p>
+                        </div>
+                        <div style="padding: 1.5rem;">
+                            <p style="color: var(--muted-text); margin-bottom: 1rem;">Tips and strategies for successfully selling verified products on AgriVeris.</p>
+                            <button class="btn-secondary" style="width: 100%;">Read Article</button>
+                        </div>
+                    </div>
+
+                    <div style="background-color: var(--pure-white); border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden;">
+                        <div style="background: linear-gradient(135deg, var(--dark-forest), var(--primary-green)); padding: 1.5rem; color: var(--pure-white);">
+                            <h3 style="margin: 0; margin-bottom: 0.5rem;">Dispute Resolution</h3>
+                            <p style="margin: 0; font-size: 0.9rem;">How to resolve conflicts fairly.</p>
+                        </div>
+                        <div style="padding: 1.5rem;">
+                            <p style="color: var(--muted-text); margin-bottom: 1rem;">Understanding AgriVeris dispute resolution processes and community voting.</p>
+                            <button class="btn-secondary" style="width: 100%;">Read Article</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>AgriVeris</h4>
+                <p>Transparent agricultural verification through AI and blockchain</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 AgriVeris. All rights reserved. | Building Trust in Agriculture</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

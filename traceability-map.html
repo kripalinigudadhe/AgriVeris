@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traceability Map - AgriVeris</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">🌿</span>
+                <span class="logo-text">AgriVeris</span>
+            </div>
+            <button class="hamburger" onclick="toggleMenu()">☰</button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="marketplace.html">Marketplace</a></li>
+                <li><a href="login.html" class="btn-primary">Login</a></li>
+                <li><a href="register.html" class="btn-secondary">Sign Up</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="dashboard-container">
+            <aside class="sidebar">
+                <ul class="sidebar-menu">
+                    <li><a href="traceability-map.html" class="active">🗺️ Traceability</a></li>
+                    <li><a href="blockchain-ledger.html">🔗 Ledger</a></li>
+                    <li><a href="payment-history.html">💳 Transactions</a></li>
+                </ul>
+            </aside>
+
+            <section class="main-content">
+                <h1 style="color: var(--dark-forest); margin-bottom: 2rem;">Traceability Map</h1>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Batch Traceability</h3>
+                    </div>
+                    <div style="background: linear-gradient(135deg, var(--mint-glow), var(--soft-white)); padding: 2rem; border-radius: 8px; margin-bottom: 1.5rem;">
+                        <svg width="100%" height="400" viewBox="0 0 800 300" style="min-height: 300px;">
+                            <circle cx="100" cy="150" r="30" fill="var(--primary-green)"/>
+                            <text x="100" y="155" text-anchor="middle" fill="white" font-weight="bold">🌾 Farm</text>
+                            
+                            <line x1="130" y1="150" x2="270" y2="150" stroke="var(--primary-green)" stroke-width="2"/>
+                            <circle cx="300" cy="150" r="30" fill="var(--secondary-green)"/>
+                            <text x="300" y="155" text-anchor="middle" fill="white" font-weight="bold">✓ Verify</text>
+                            
+                            <line x1="330" y1="150" x2="470" y2="150" stroke="var(--primary-green)" stroke-width="2"/>
+                            <circle cx="500" cy="150" r="30" fill="var(--olive-neutral)"/>
+                            <text x="500" y="155" text-anchor="middle" fill="white" font-weight="bold">📦 Package</text>
+                            
+                            <line x1="530" y1="150" x2="670" y2="150" stroke="var(--primary-green)" stroke-width="2"/>
+                            <circle cx="700" cy="150" r="30" fill="var(--dark-forest)"/>
+                            <text x="700" y="155" text-anchor="middle" fill="white" font-weight="bold">🏪 Market</text>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="card" style="margin-top: 2rem;">
+                    <div class="card-header">
+                        <h3>Batch Details</h3>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Stage</th>
+                                <th>Location</th>
+                                <th>Date</th>
+                                <th>Verified By</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Farm Production</td>
+                                <td>Green Acres, California</td>
+                                <td>2024-01-15</td>
+                                <td>John Farmer</td>
+                            </tr>
+                            <tr>
+                                <td>AI Verification</td>
+                                <td>AgriVeris Lab</td>
+                                <td>2024-01-16</td>
+                                <td>AI System</td>
+                            </tr>
+                            <tr>
+                                <td>Manual Audit</td>
+                                <td>Quality Center</td>
+                                <td>2024-01-17</td>
+                                <td>Jane Verifier</td>
+                            </tr>
+                            <tr>
+                                <td>Marketplace Listed</td>
+                                <td>AgriVeris Platform</td>
+                                <td>2024-01-18</td>
+                                <td>System</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>AgriVeris</h4>
+                <p>Transparent agricultural verification through AI and blockchain</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 AgriVeris. All rights reserved. | Building Trust in Agriculture</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rewards Center - AgriVeris</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">🌿</span>
+                <span class="logo-text">AgriVeris</span>
+            </div>
+            <button class="hamburger" onclick="toggleMenu()">☰</button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="marketplace.html">Marketplace</a></li>
+                <li><a href="login.html" class="btn-primary">Login</a></li>
+                <li><a href="register.html" class="btn-secondary">Sign Up</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="dashboard-container">
+            <aside class="sidebar">
+                <ul class="sidebar-menu">
+                    <li><a href="reward-center.html" class="active">🏅 Rewards</a></li>
+                    <li><a href="carbon-trace.html">🌍 Carbon</a></li>
+                    <li><a href="payment-history.html">💳 Payments</a></li>
+                </ul>
+            </aside>
+
+            <section class="main-content">
+                <h1 style="color: var(--dark-forest); margin-bottom: 2rem;">Sustainability Rewards Hub</h1>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+                    <div style="background-color: var(--pure-white); border-left: 4px solid var(--primary-green); padding: 1.5rem; border-radius: 5px;">
+                        <h4 style="color: var(--muted-text); margin-bottom: 0.5rem;">Total Tokens Earned</h4>
+                        <p style="font-size: 1.8rem; color: var(--primary-green); font-weight: bold;">12,450</p>
+                    </div>
+                    <div style="background-color: var(--pure-white); border-left: 4px solid var(--secondary-green); padding: 1.5rem; border-radius: 5px;">
+                        <h4 style="color: var(--muted-text); margin-bottom: 0.5rem;">Token Value</h4>
+                        <p style="font-size: 1.8rem; color: var(--secondary-green); font-weight: bold;">$6,225</p>
+                    </div>
+                    <div style="background-color: var(--pure-white); border-left: 4px solid var(--olive-neutral); padding: 1.5rem; border-radius: 5px;">
+                        <h4 style="color: var(--muted-text); margin-bottom: 0.5rem;">This Month</h4>
+                        <p style="font-size: 1.8rem; color: var(--olive-neutral); font-weight: bold;">+2,150</p>
+                    </div>
+                    <div style="background-color: var(--pure-white); border-left: 4px solid var(--dark-forest); padding: 1.5rem; border-radius: 5px;">
+                        <h4 style="color: var(--muted-text); margin-bottom: 0.5rem;">Tier Level</h4>
+                        <p style="font-size: 1.8rem; color: var(--dark-forest); font-weight: bold;">Gold</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Reward Opportunities</h3>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Activity</th>
+                                <th>Reward</th>
+                                <th>Completed</th>
+                                <th>Next</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Verified Crop Batch</td>
+                                <td>500 tokens</td>
+                                <td>45 / 50</td>
+                                <td>5 batches</td>
+                            </tr>
+                            <tr>
+                                <td>Carbon Offset</td>
+                                <td>250 tokens</td>
+                                <td>12 / 12</td>
+                                <td>Completed</td>
+                            </tr>
+                            <tr>
+                                <td>Community Contribution</td>
+                                <td>100 tokens</td>
+                                <td>28 / 30</td>
+                                <td>2 posts</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>AgriVeris</h4>
+                <p>Transparent agricultural verification through AI and blockchain</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 AgriVeris. All rights reserved. | Building Trust in Agriculture</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

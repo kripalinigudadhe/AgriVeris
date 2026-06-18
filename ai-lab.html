@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Lab - AgriVeris</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">🌿</span>
+                <span class="logo-text">AgriVeris</span>
+            </div>
+            <button class="hamburger" onclick="toggleMenu()">☰</button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="marketplace.html">Marketplace</a></li>
+                <li><a href="login.html" class="btn-primary">Login</a></li>
+                <li><a href="register.html" class="btn-secondary">Sign Up</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="dashboard-container">
+            <aside class="sidebar">
+                <ul class="sidebar-menu">
+                    <li><a href="ai-lab.html" class="active">🧬 Lab</a></li>
+                    <li><a href="ai-analysis.html">🤖 Analysis</a></li>
+                    <li><a href="analytics.html">📊 Results</a></li>
+                </ul>
+            </aside>
+
+            <section class="main-content">
+                <h1 style="color: var(--dark-forest); margin-bottom: 2rem;">AI Innovation Lab</h1>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Model Training Status</h3>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Model</th>
+                                <th>Accuracy</th>
+                                <th>Training Data</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Crop Image Classification</td>
+                                <td>96.5%</td>
+                                <td>50,000 images</td>
+                                <td><span class="badge badge-success">Active</span></td>
+                            </tr>
+                            <tr>
+                                <td>Soil Quality Analysis</td>
+                                <td>94.2%</td>
+                                <td>30,000 samples</td>
+                                <td><span class="badge badge-success">Active</span></td>
+                            </tr>
+                            <tr>
+                                <td>Anomaly Detection</td>
+                                <td>98.1%</td>
+                                <td>100,000 records</td>
+                                <td><span class="badge badge-success">Active</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="card" style="margin-top: 2rem;">
+                    <div class="card-header">
+                        <h3>Recent Experiments</h3>
+                    </div>
+                    <div style="display: grid; gap: 1rem;">
+                        <div style="padding: 1rem; background-color: var(--soft-white); border-radius: 5px;">
+                            <h4 style="color: var(--primary-green); margin: 0 0 0.5rem 0;">Crop Yield Prediction v2.1</h4>
+                            <p style="color: var(--muted-text); font-size: 0.9rem; margin: 0;">Enhanced model for predicting crop yield based on weather patterns and soil data.</p>
+                        </div>
+                        <div style="padding: 1rem; background-color: var(--soft-white); border-radius: 5px;">
+                            <h4 style="color: var(--primary-green); margin: 0 0 0.5rem 0;">Pest Detection AI</h4>
+                            <p style="color: var(--muted-text); font-size: 0.9rem; margin: 0;">Computer vision model for early pest detection in crop fields.</p>
+                        </div>
+                        <div style="padding: 1rem; background-color: var(--soft-white); border-radius: 5px;">
+                            <h4 style="color: var(--primary-green); margin: 0 0 0.5rem 0;">Carbon Footprint Calculator</h4>
+                            <p style="color: var(--muted-text); font-size: 0.9rem; margin: 0;">ML-powered tool for calculating precise carbon emissions from farming practices.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>AgriVeris</h4>
+                <p>Transparent agricultural verification through AI and blockchain</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 AgriVeris. All rights reserved. | Building Trust in Agriculture</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

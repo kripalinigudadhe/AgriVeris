@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - AgriVeris</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .contact-card {
+            background-color: var(--pure-white);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .contact-card h3 {
+            color: var(--primary-green);
+            margin-bottom: 1rem;
+        }
+
+        .contact-form {
+            background-color: var(--pure-white);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">🌿</span>
+                <span class="logo-text">AgriVeris</span>
+            </div>
+            <button class="hamburger" onclick="toggleMenu()">☰</button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="marketplace.html">Marketplace</a></li>
+                <li><a href="login.html" class="btn-primary">Login</a></li>
+                <li><a href="register.html" class="btn-secondary">Sign Up</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="contact-container">
+            <h1 style="color: var(--dark-forest); text-align: center; margin-bottom: 1rem;">Get in Touch</h1>
+            <p style="text-align: center; color: var(--muted-text); margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto;">Have questions about AgriVeris? We'd love to hear from you. Contact us through any of these channels.</p>
+
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">📧</div>
+                    <h3>Email</h3>
+                    <p style="color: var(--muted-text);">support@agrivers.com</p>
+                    <p style="color: var(--muted-text); font-size: 0.9rem;">Response time: 24 hours</p>
+                </div>
+
+                <div class="contact-card">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">📱</div>
+                    <h3>Phone</h3>
+                    <p style="color: var(--muted-text);">+1 (555) 123-4567</p>
+                    <p style="color: var(--muted-text); font-size: 0.9rem;">Mon-Fri, 9AM-5PM EST</p>
+                </div>
+
+                <div class="contact-card">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">📍</div>
+                    <h3>Office</h3>
+                    <p style="color: var(--muted-text);">123 Agriculture Drive<br>San Francisco, CA 94105</p>
+                    <p style="color: var(--muted-text); font-size: 0.9rem;">USA</p>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h2 style="color: var(--dark-forest); margin-bottom: 1.5rem;">Send us a Message</h2>
+                <form onsubmit="handleContactSubmit(event)">
+                    <div class="form-group">
+                        <label for="cname">Name</label>
+                        <input type="text" id="cname" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cemail">Email</label>
+                        <input type="email" id="cemail" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="csubject">Subject</label>
+                        <input type="text" id="csubject" name="subject" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cmessage">Message</label>
+                        <textarea id="cmessage" name="message" rows="5" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-primary" style="width: 100%;">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>AgriVeris</h4>
+                <p>Transparent agricultural verification through AI and blockchain</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 AgriVeris. All rights reserved. | Building Trust in Agriculture</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function handleContactSubmit(e) {
+            e.preventDefault();
+            showToast('Message sent successfully! We\'ll get back to you soon.', 'success');
+            e.target.reset();
+        }
+    </script>
+</body>
+</html>

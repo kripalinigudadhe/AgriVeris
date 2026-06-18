@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketplace - AgriVeris</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .filter-bar {
+            background-color: var(--pure-white);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        
+        .filter-bar select, .filter-bar input {
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .product-card {
+            background-color: var(--pure-white);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+        
+        .product-card:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, var(--mint-glow), var(--primary-green));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+        
+        .product-info {
+            padding: 1.5rem;
+        }
+        
+        .product-name {
+            color: var(--dark-forest);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .product-meta {
+            font-size: 0.9rem;
+            color: var(--muted-text);
+            margin-bottom: 1rem;
+        }
+        
+        .product-price {
+            font-size: 1.3rem;
+            color: var(--primary-green);
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        
+        .product-badge {
+            display: inline-block;
+            background-color: var(--mint-glow);
+            color: var(--secondary-green);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-bottom: 1rem;
+        }
+        
+        .product-action {
+            width: 100%;
+            padding: 0.75rem;
+            background-color: var(--primary-green);
+            color: var(--pure-white);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .product-action:hover {
+            background-color: var(--secondary-green);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">🌿</span>
+                <span class="logo-text">AgriVeris</span>
+            </div>
+            <button class="hamburger" onclick="toggleMenu()">☰</button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="marketplace.html" class="active">Marketplace</a></li>
+                <li><a href="login.html" class="btn-primary">Login</a></li>
+                <li><a href="register.html" class="btn-secondary">Sign Up</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="dashboard-container">
+            <aside class="sidebar">
+                <ul class="sidebar-menu">
+                    <li><a href="marketplace.html" class="active">🛍️ Browse</a></li>
+                    <li><a href="cart.html" style="display: none;">🛒 Cart</a></li>
+                    <li><a href="orders.html" style="display: none;">📦 My Orders</a></li>
+                    <li><a href="favorites.html" style="display: none;">❤️ Favorites</a></li>
+                </ul>
+            </aside>
+
+            <section class="main-content">
+                <h1 style="color: var(--dark-forest); margin-bottom: 2rem;">Verified Marketplace</h1>
+                
+                <div class="filter-bar">
+                    <select>
+                        <option>All Products</option>
+                        <option>Vegetables</option>
+                        <option>Fruits</option>
+                        <option>Grains</option>
+                        <option>Dairy</option>
+                    </select>
+                    <select>
+                        <option>All Certifications</option>
+                        <option>Organic</option>
+                        <option>Fair Trade</option>
+                        <option>Carbon Neutral</option>
+                    </select>
+                    <input type="text" placeholder="Search products...">
+                </div>
+
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-image">🍅</div>
+                        <div class="product-info">
+                            <p class="product-name">Organic Tomatoes</p>
+                            <p class="product-meta">From: Fresh Farms Co. | 2kg</p>
+                            <div class="product-badge">✓ Verified</div>
+                            <p class="product-price">$12.99</p>
+                            <button class="product-action" onclick="addToCart('Organic Tomatoes', 12.99)">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">🥬</div>
+                        <div class="product-info">
+                            <p class="product-name">Organic Spinach</p>
+                            <p class="product-meta">From: Green Valley Farm | 500g</p>
+                            <div class="product-badge">✓ Verified</div>
+                            <p class="product-price">$8.49</p>
+                            <button class="product-action" onclick="addToCart('Organic Spinach', 8.49)">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">🥕</div>
+                        <div class="product-info">
+                            <p class="product-name">Free-Range Carrots</p>
+                            <p class="product-meta">From: Eco Harvest | 1.5kg</p>
+                            <div class="product-badge">✓ Verified</div>
+                            <p class="product-price">$6.99</p>
+                            <button class="product-action" onclick="addToCart('Free-Range Carrots', 6.99)">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">🍎</div>
+                        <div class="product-info">
+                            <p class="product-name">Organic Apples</p>
+                            <p class="product-meta">From: Orchard Fresh | 2kg</p>
+                            <div class="product-badge">✓ Verified</div>
+                            <p class="product-price">$14.99</p>
+                            <button class="product-action" onclick="addToCart('Organic Apples', 14.99)">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">🌾</div>
+                        <div class="product-info">
+                            <p class="product-name">Organic Wheat</p>
+                            <p class="product-meta">From: Golden Fields | 5kg</p>
+                            <div class="product-badge">✓ Verified</div>
+                            <p class="product-price">$24.99</p>
+                            <button class="product-action" onclick="addToCart('Organic Wheat', 24.99)">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">🥒</div>
+                        <div class="product-info">
+                            <p class="product-name">Organic Cucumbers</p>
+                            <p class="product-meta">From: Local Gardens | 1kg</p>
+                            <div class="product-badge">✓ Verified</div>
+                            <p class="product-price">$9.99</p>
+                            <button class="product-action" onclick="addToCart('Organic Cucumbers', 9.99)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>AgriVeris</h4>
+                <p>Transparent agricultural verification through AI and blockchain</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 AgriVeris. All rights reserved. | Building Trust in Agriculture</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function addToCart(productName, price) {
+            showToast(`Added ${productName} to cart ($${price})`, 'success');
+        }
+    </script>
+</body>
+</html>

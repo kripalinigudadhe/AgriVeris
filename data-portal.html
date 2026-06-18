@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Portal - AgriVeris</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">🌿</span>
+                <span class="logo-text">AgriVeris</span>
+            </div>
+            <button class="hamburger" onclick="toggleMenu()">☰</button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="marketplace.html">Marketplace</a></li>
+                <li><a href="login.html" class="btn-primary">Login</a></li>
+                <li><a href="register.html" class="btn-secondary">Sign Up</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="dashboard-container">
+            <aside class="sidebar">
+                <ul class="sidebar-menu">
+                    <li><a href="data-portal.html" class="active">📤 Data Portal</a></li>
+                    <li><a href="ai-analysis.html">🤖 Analysis</a></li>
+                    <li><a href="analytics.html">📊 Reports</a></li>
+                </ul>
+            </aside>
+
+            <section class="main-content">
+                <h1 style="color: var(--dark-forest); margin-bottom: 2rem;">Data Submission & API Access</h1>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Upload Agricultural Data</h3>
+                    </div>
+                    <form onsubmit="handleDataUpload(event)">
+                        <div class="form-group">
+                            <label for="dataType">Data Type</label>
+                            <select id="dataType" required>
+                                <option>Select Data Type</option>
+                                <option>IoT Sensor Data</option>
+                                <option>Drone Imagery</option>
+                                <option>Weather Data</option>
+                                <option>Soil Analysis</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="dataFile">Choose File</label>
+                            <input type="file" id="dataFile" accept=".csv,.json,.xml" required>
+                        </div>
+
+                        <button type="submit" class="btn-primary" style="width: 100%;">Upload Data</button>
+                    </form>
+                </div>
+
+                <div class="card" style="margin-top: 2rem;">
+                    <div class="card-header">
+                        <h3>API Documentation</h3>
+                    </div>
+                    <div style="padding: 1rem; background-color: var(--soft-white); border-radius: 5px; font-family: monospace; margin-bottom: 1rem;">
+                        <p style="margin: 0; color: var(--dark-forest);">GET /api/v1/crops</p>
+                        <p style="margin: 0; color: var(--muted-text); font-size: 0.9rem;">Retrieve list of verified crops</p>
+                    </div>
+                    <div style="padding: 1rem; background-color: var(--soft-white); border-radius: 5px; font-family: monospace; margin-bottom: 1rem;">
+                        <p style="margin: 0; color: var(--dark-forest);">POST /api/v1/verify</p>
+                        <p style="margin: 0; color: var(--muted-text); font-size: 0.9rem;">Submit data for AI verification</p>
+                    </div>
+                    <div style="padding: 1rem; background-color: var(--soft-white); border-radius: 5px; font-family: monospace;">
+                        <p style="margin: 0; color: var(--dark-forest);">GET /api/v1/results/{batchId}</p>
+                        <p style="margin: 0; color: var(--muted-text); font-size: 0.9rem;">Retrieve verification results</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>AgriVeris</h4>
+                <p>Transparent agricultural verification through AI and blockchain</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 AgriVeris. All rights reserved. | Building Trust in Agriculture</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function handleDataUpload(e) {
+            e.preventDefault();
+            showToast('Data uploaded successfully', 'success');
+            e.target.reset();
+        }
+    </script>
+</body>
+</html>

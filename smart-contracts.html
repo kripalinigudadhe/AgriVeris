@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Contracts - AgriVeris</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">🌿</span>
+                <span class="logo-text">AgriVeris</span>
+            </div>
+            <button class="hamburger" onclick="toggleMenu()">☰</button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="marketplace.html">Marketplace</a></li>
+                <li><a href="login.html" class="btn-primary">Login</a></li>
+                <li><a href="register.html" class="btn-secondary">Sign Up</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="dashboard-container">
+            <aside class="sidebar">
+                <ul class="sidebar-menu">
+                    <li><a href="smart-contracts.html" class="active">💰 Contracts</a></li>
+                    <li><a href="blockchain-ledger.html">🔗 Ledger</a></li>
+                    <li><a href="payment-history.html">💳 Payments</a></li>
+                </ul>
+            </aside>
+
+            <section class="main-content">
+                <h1 style="color: var(--dark-forest); margin-bottom: 2rem;">Smart Contract Details</h1>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Active Contracts</h3>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Contract ID</th>
+                                <th>Type</th>
+                                <th>Value</th>
+                                <th>Status</th>
+                                <th>Expires</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>0x3a7f8c2d9e1b4f6a</td>
+                                <td>Verification Agreement</td>
+                                <td>$500</td>
+                                <td><span class="badge badge-success">Active</span></td>
+                                <td>2024-12-31</td>
+                            </tr>
+                            <tr>
+                                <td>0x4b9e1d3c5f7a2e8b</td>
+                                <td>Payment Settlement</td>
+                                <td>$1,250</td>
+                                <td><span class="badge badge-success">Active</span></td>
+                                <td>2024-06-30</td>
+                            </tr>
+                            <tr>
+                                <td>0x5c2f4e6a1d9b3e7c</td>
+                                <td>Carbon Credit Sale</td>
+                                <td>$300</td>
+                                <td><span class="badge badge-success">Active</span></td>
+                                <td>2025-03-31</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="card" style="margin-top: 2rem;">
+                    <div class="card-header">
+                        <h3>Contract Terms</h3>
+                    </div>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                        <div style="padding: 1rem; background-color: var(--soft-white); border-radius: 5px;">
+                            <h4 style="color: var(--primary-green); margin-bottom: 0.5rem;">Verification Terms</h4>
+                            <ul style="color: var(--muted-text); font-size: 0.9rem; list-style: none;">
+                                <li>✓ 48-hour verification window</li>
+                                <li>✓ Multi-layer approval required</li>
+                                <li>✓ Automated payments upon approval</li>
+                            </ul>
+                        </div>
+                        <div style="padding: 1rem; background-color: var(--soft-white); border-radius: 5px;">
+                            <h4 style="color: var(--primary-green); margin-bottom: 0.5rem;">Dispute Resolution</h4>
+                            <ul style="color: var(--muted-text); font-size: 0.9rem; list-style: none;">
+                                <li>✓ 7-day dispute window</li>
+                                <li>✓ Community voting mechanism</li>
+                                <li>✓ Escrow protection</li>
+                            </ul>
+                        </div>
+                        <div style="padding: 1rem; background-color: var(--soft-white); border-radius: 5px;">
+                            <h4 style="color: var(--primary-green); margin-bottom: 0.5rem;">Penalty Clauses</h4>
+                            <ul style="color: var(--muted-text); font-size: 0.9rem; list-style: none;">
+                                <li>✓ False claims: 10% penalty</li>
+                                <li>✓ Late delivery: 5% per day</li>
+                                <li>✓ Quality issues: Negotiable</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>AgriVeris</h4>
+                <p>Transparent agricultural verification through AI and blockchain</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 AgriVeris. All rights reserved. | Building Trust in Agriculture</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

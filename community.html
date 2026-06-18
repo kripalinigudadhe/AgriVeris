@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Community - AgriVeris</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">🌿</span>
+                <span class="logo-text">AgriVeris</span>
+            </div>
+            <button class="hamburger" onclick="toggleMenu()">☰</button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="marketplace.html">Marketplace</a></li>
+                <li><a href="login.html" class="btn-primary">Login</a></li>
+                <li><a href="register.html" class="btn-secondary">Sign Up</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="dashboard-container">
+            <aside class="sidebar">
+                <ul class="sidebar-menu">
+                    <li><a href="community.html" class="active">🌾 Community</a></li>
+                    <li><a href="knowledge-hub.html">📚 Knowledge Hub</a></li>
+                    <li><a href="partnerships.html">🤝 Partnerships</a></li>
+                </ul>
+            </aside>
+
+            <section class="main-content">
+                <h1 style="color: var(--dark-forest); margin-bottom: 2rem;">Farmer Community</h1>
+                
+                <div class="card" style="margin-bottom: 2rem;">
+                    <div class="card-header">
+                        <h3>Start a Discussion</h3>
+                    </div>
+                    <form onsubmit="handlePost(event)">
+                        <div class="form-group">
+                            <textarea placeholder="Share your thoughts, questions, or experiences..." style="height: 100px;" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Post</button>
+                    </form>
+                </div>
+
+                <div style="display: grid; gap: 1.5rem;">
+                    <div style="background-color: var(--pure-white); border: 1px solid var(--border-color); border-radius: 8px; padding: 1.5rem;">
+                        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+                            <div>
+                                <h4 style="color: var(--dark-forest); margin: 0 0 0.25rem 0;">Best Practices for Organic Farming</h4>
+                                <p style="color: var(--muted-text); font-size: 0.9rem; margin: 0;">Posted by John Farmer • 2 hours ago</p>
+                            </div>
+                            <span class="badge badge-success">12 Replies</span>
+                        </div>
+                        <p style="color: var(--muted-text);">I've been farming organically for 10 years and would like to share my experiences with soil management and crop rotation strategies...</p>
+                    </div>
+
+                    <div style="background-color: var(--pure-white); border: 1px solid var(--border-color); border-radius: 8px; padding: 1.5rem;">
+                        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+                            <div>
+                                <h4 style="color: var(--dark-forest); margin: 0 0 0.25rem 0;">AI Analysis Results - Any Questions?</h4>
+                                <p style="color: var(--muted-text); font-size: 0.9rem; margin: 0;">Posted by Jane Smith • 5 hours ago</p>
+                            </div>
+                            <span class="badge badge-pending">8 Replies</span>
+                        </div>
+                        <p style="color: var(--muted-text);">I received my AI analysis report today. The confidence score was 94%. Has anyone seen similar results? What does this mean for my certification?</p>
+                    </div>
+
+                    <div style="background-color: var(--pure-white); border: 1px solid var(--border-color); border-radius: 8px; padding: 1.5rem;">
+                        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+                            <div>
+                                <h4 style="color: var(--dark-forest); margin: 0 0 0.25rem 0;">Market Demand for Spring Harvest</h4>
+                                <p style="color: var(--muted-text); font-size: 0.9rem; margin: 0;">Posted by Mike Johnson • 1 day ago</p>
+                            </div>
+                            <span class="badge badge-warning">5 Replies</span>
+                        </div>
+                        <p style="color: var(--muted-text);">Looking ahead to spring crops - what vegetables are seeing the highest demand on AgriVeris marketplace currently?</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>AgriVeris</h4>
+                <p>Transparent agricultural verification through AI and blockchain</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 AgriVeris. All rights reserved. | Building Trust in Agriculture</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function handlePost(e) {
+            e.preventDefault();
+            showToast('Post published successfully', 'success');
+            e.target.reset();
+        }
+    </script>
+</body>
+</html>
